@@ -20,7 +20,7 @@ export function Hero({ id }: AnimatedProps) {
   return (
     <section
       id={id}
-      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center px-4 overflow-hidden py-20"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-1/4 -left-1/4 w-[1000px] h-[1000px] bg-gradient-to-r from-blue-500/30 via-cyan-500/30 to-emerald-500/30 dark:from-blue-500/20 dark:via-cyan-500/20 dark:to-emerald-500/20 rounded-full blur-3xl animate-slow-spin"></div>
@@ -75,7 +75,7 @@ export function Hero({ id }: AnimatedProps) {
           ))}
         </motion.div>
 
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 relative mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -104,6 +104,5 @@ export function Hero({ id }: AnimatedProps) {
         </div>
       </div>
     </section>
-
   );
 }

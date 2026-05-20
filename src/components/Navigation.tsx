@@ -4,7 +4,7 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { BarChart3, Home, Image, Layers, User } from "lucide-react";
+import { Activity, BarChart3, Home, Image, Layers, User } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 
 export function Navigation() {
@@ -20,6 +20,14 @@ export function Navigation() {
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
                   <Home className="w-4 h-4" /> <span>顶部</span>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="px-4">
+                <NavigationMenuLink
+                  href="#status"
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+                >
+                  <Activity className="w-4 h-4" /> <span>今日状态</span>
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem className="px-4">
@@ -66,6 +74,14 @@ export function Navigation() {
                   className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
                 >
                   <Home className="w-6 h-6" />
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="#status"
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+                >
+                  <Activity className="w-6 h-6" />
                 </NavigationMenuLink>
               </NavigationMenuItem>
               <NavigationMenuItem>
