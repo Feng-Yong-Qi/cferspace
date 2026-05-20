@@ -32,6 +32,9 @@ yarn-error.log*
 # local secrets (never commit)
 kv.json
 
+# kiro/claude local config
+.claude/
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
