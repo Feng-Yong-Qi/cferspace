@@ -4,10 +4,11 @@ import {
   NavigationMenuLink,
   NavigationMenuList,
 } from "@/components/ui/navigation-menu";
-import { Activity, BarChart3, Home, Image, Layers, User } from "lucide-react";
+import { Activity, BarChart3, Download, Home, Image, Layers, User } from "lucide-react";
 import { ModeToggle } from "./ModeToggle";
 
 export function Navigation() {
+
   return (
     <nav className="fixed w-full top-0 z-50 px-4 py-3">
       <div className="max-w-7xl mx-auto flex items-center justify-center">
@@ -63,6 +64,14 @@ export function Navigation() {
                   <Image className="w-4 h-4" /> <span>Q&A</span>
                 </NavigationMenuLink>
               </NavigationMenuItem>
+              <NavigationMenuItem className="px-4">
+                <NavigationMenuLink
+                  href="/downloads"
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+                >
+                  <Download className="w-4 h-4" /> <span>下载</span>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -115,6 +124,14 @@ export function Navigation() {
                 >
                   {/* eslint-disable-next-line jsx-a11y/alt-text */}
                   <Image className="w-6 h-6" />
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  href="/downloads"
+                  className="text-foreground/80 hover:text-foreground flex items-center gap-2 transition-colors"
+                >
+                  <Download className="w-6 h-6" />
                 </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>

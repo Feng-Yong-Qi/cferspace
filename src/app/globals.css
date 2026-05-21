@@ -12,6 +12,9 @@
   * {
     @apply border-border;
   }
+  html {
+    scrollbar-gutter: stable;
+  }
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
@@ -27,10 +30,6 @@
 ::-moz-selection {
   background-color: rgb(4, 47, 46);
   color: rgb(45, 212, 191);
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 @layer base {
@@ -115,4 +114,30 @@ html {
 
 .animate-infinite-scroll:hover {
   animation-play-state: paused;
+}
+
+/* 
+  全局统一的高颜值窄滚动条系统 (主要适配 Webkit 内核浏览器)
+  统一缩窄所有滚动条宽度为 8px，确保首页、下载页、弹窗、局部组件的滚动条尺寸与视觉质感完美一致。
+*/
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.25);
+  border-radius: 99px;
+  transition: all 0.2s;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.45);
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+}
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.25);
 }
