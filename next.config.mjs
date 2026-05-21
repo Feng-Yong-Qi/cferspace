@@ -3,9 +3,15 @@ const nextConfig = {
     reactStrictMode: true,
     output: 'export',
     distDir: 'dist',
+    devIndicators: false,
+    turbopack: {
+        root: '.',
+    },
     images: {
         unoptimized: true,
-        domains: ['avatars.githubusercontent.com'],
+        remotePatterns: [
+            { hostname: 'avatars.githubusercontent.com' },
+        ],
     },
 };
 
